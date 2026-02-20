@@ -3,9 +3,11 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uuid/uuid.dart';
 import '../models/habit.dart';
+import '../services/ads_service.dart';
 import '../services/gemini_service.dart';
 import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/habit_tile.dart';
 
 class HabitsScreen extends StatefulWidget {
@@ -50,6 +52,10 @@ class _HabitsScreenState extends State<HabitsScreen> {
           _habits.add(habit);
           await StorageService.saveHabits(_habits);
           setState(() {});
+          // Show interstitial every 3 habits added
+          if (_habits.length % 3 == 0) {
+            AdsService.showInterstitial();
+          }
         },
       ),
     );
@@ -61,6 +67,7 @@ class _HabitsScreenState extends State<HabitsScreen> {
       appBar: AppBar(
         title: const Text('My Habits'),
       ),
+      bottomNavigationBar: const BannerAdWidget(),
       body: _habits.isEmpty
           ? Center(
               child: Column(

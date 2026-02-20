@@ -6,6 +6,7 @@ import '../services/gemini_service.dart';
 import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/habit_tile.dart';
+import '../widgets/banner_ad_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -61,6 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: const BannerAdWidget(),
       body: RefreshIndicator(
         onRefresh: _load,
         color: AppTheme.primary,
