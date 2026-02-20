@@ -1,0 +1,1 @@
+ /Users/mirkhujaev/Projects/CoachMe/.dart_tool/flutter_build/f8ff1036b9146239c0849d92be2c1967/dart_build_result.json:  /Users/mirkhujaev/Projects/CoachMe/.dart_tool/package_config.json /Users/mirkhujaev/Projects/CoachMe/pubspec.yaml /usr/local/share/flutter/bin/cache/dart-sdk/version

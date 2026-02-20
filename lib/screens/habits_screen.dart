@@ -3,7 +3,8 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uuid/uuid.dart';
 import '../models/habit.dart';
-import '../services/ads_service.dart';
+import '../services/ads_service_stub.dart'
+    if (dart.library.io) '../services/ads_service_mobile.dart';
 import '../services/gemini_service.dart';
 import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
