@@ -3,7 +3,7 @@ import '../models/habit.dart';
 import '../models/chat_message.dart';
 
 class GeminiService {
-  static const _apiKey = 'AIzaSyCblsJzehe_0zvhq4q-Qh9ILK3CLzkgC-U';
+  static const _apiKey = 'AIzaSyAsYa0tVqaoLqjHDgpuWoRJQjGm6Psp6To';
   static const _systemPrompt =
       'You are CoachMe, a friendly and motivational AI habit coach. '
       'Be concise, encouraging, and personalized. Use emojis naturally. '
